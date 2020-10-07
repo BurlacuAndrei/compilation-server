@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TCPDataClient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TCPDataClient_jar</output-path>
+    <root id="archive" name="TCPDataClient.jar">
+      <element id="module-output" name="TCPDataClient" />
+    </root>
+  </artifact>
+</component>

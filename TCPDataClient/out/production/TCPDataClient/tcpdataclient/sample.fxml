@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcpdataclient.Controller">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="516.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fișier">
+            <items>
+              <MenuItem id="menuItem_AlegeProiect" mnemonicParsing="false" onAction="#setButton_AlegeProiect_Callback" text="Alege proiect" />
+                  <MenuItem id="menuItem_Compileaza" mnemonicParsing="false" text="Compilează" />
+                  <Menu mnemonicParsing="false" text="Descarca">
+                    <items>
+                        <MenuItem id="menuItem_Executabil" mnemonicParsing="false" onAction="#setMenuItem_Executabil_Callback" text="Executabil" />
+                      <MenuItem id="menuItem_ExecutabilArtefacte" mnemonicParsing="false" onAction="#setMenuItem_Executabil_Si_Artefacte_Callback" text="Executabil și artefacte" />
+                    </items>
+                  </Menu>
+                  <MenuItem id="menuItem_Iesire" mnemonicParsing="false" text="Ieșire" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajutor">
+            <items>
+              <MenuItem id="menuItem_Despre" mnemonicParsing="false" text="Despre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="textField_ProjectPath" layoutX="14.0" layoutY="44.0" prefHeight="25.0" prefWidth="396.0" />
+      <Button id="Button_AlegeProiect" fx:id="button_AlegeProiect" layoutX="417.0" layoutY="44.0" mnemonicParsing="false" onAction="#setButton_AlegeProiect_Callback" prefHeight="25.0" prefWidth="87.0" text="Alege proiect" />
+      <MenuButton fx:id="menuButton_Descarca" layoutX="337.0" layoutY="85.0" mnemonicParsing="false" text="Descarcă">
+        <items>
+          <MenuItem id="Button_Executabil" fx:id="menuItem_Executabil" mnemonicParsing="false" onAction="#setMenuItem_Executabil_Callback" text="Executabil" />
+          <MenuItem id="Button_ExecutabilArtefacte" fx:id="menuItem_Executabil_Si_Artefacte" mnemonicParsing="false" onAction="#setMenuItem_Executabil_Si_Artefacte_Callback" text="Executabil și artefacte" />
+        </items>
+      </MenuButton>
+      <Button id="Button_Compileaza" fx:id="button_Compile" layoutX="118.0" layoutY="85.0" mnemonicParsing="false" onAction="#setButton_Compile_Callback" text="Compilează" />
+      <Label layoutX="14.0" layoutY="27.0" text="Calea către proiect" />
+      <Label layoutX="18.0" layoutY="120.0" text="Timpul de compilare a proiectului:" />
+      <Label id="Label_Status" fx:id="label_alegeProiect" layoutX="59.0" layoutY="155.0" style="-fx-font-weight: bold;" text="Alege proiectul" underline="true" />
+      <Label layoutX="15.0" layoutY="179.0" text="Ieșire:" />
+      <TextArea id="TextArea_Output" fx:id="textarea_Output" layoutX="15.0" layoutY="196.0" prefHeight="165.0" prefWidth="487.0" />
+      <Label layoutX="20.0" layoutY="155.0" text="Statut:" />
+      <Label fx:id="label_timp" layoutX="206.0" layoutY="120.0" text="00:00:00" />
+   </children>
+</AnchorPane>
